@@ -1,6 +1,6 @@
 package com.br.lucasengcomp.strproducer.resources;
 
-import com.br.lucasengcomp.strproducer.services.StringProducesServices;
+import com.br.lucasengcomp.strproducer.services.StringProducesService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/producer")
 public class StringProducerResource {
 
-    private final StringProducesServices producesServices;
+    private final StringProducesService producesServices;
 
     @PostMapping
     public ResponseEntity<?> sendMessage(@RequestBody String message) {
